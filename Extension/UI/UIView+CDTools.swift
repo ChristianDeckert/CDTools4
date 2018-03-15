@@ -82,36 +82,12 @@ extension UIView {
 
     func addDropShadow(shadowRadius: CGFloat = 4.0, shadowOpacity: Float = 0.75, shadowOffset: CGSize = CGSize(width: 0, height: 0)) {
         self.clipsToBounds = false
-        self.layer.shadowColor = NightingaleColor.untBlack().cgColor
+        self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = shadowOpacity
         self.layer.shadowRadius = shadowRadius
         self.layer.shadowOffset = shadowOffset
     }
 
-    func addDropShadowBottomOnly(shadowRadius: CGFloat = 4.0, shadowOpacity: Float = 0.75, shadowOffset: CGSize = CGSize(width: 0, height: 0)) {
-
-        for sublayer in layer.sublayers ?? [] {
-            guard sublayer is ShapeLayer else { continue }
-            sublayer.removeFromSuperlayer()
-        }
-
-        self.clipsToBounds = false
-        let distance: CGFloat = 4
-        var bounds = self.bounds
-        bounds.size.height = distance
-        bounds.origin.y = self.bounds.height - distance
-
-        let shapeLayer = ShapeLayer()
-        shapeLayer.frame = bounds
-        shapeLayer.backgroundColor = backgroundColor?.cgColor
-        shapeLayer.shadowColor = NightingaleColor.untBlack().cgColor
-        shapeLayer.shadowOpacity = shadowOpacity
-        shapeLayer.shadowRadius = shadowRadius
-        shapeLayer.shadowOffset = shadowOffset
-        shapeLayer.shouldRasterize = true
-        addSolidLayer(frame: self.bounds, color: backgroundColor ?? .white)
-        layer.insertSublayer(shapeLayer, at: 0)
-    }
 
     /**
      Removes all subviews of a given (generic) type.
@@ -126,14 +102,11 @@ extension UIView {
      Example:
      let arrayOfViews: [MyFancyViewClass] = self.removeSubviewsOfType
     */
-    @discardableResult func removeSubviewsOfType<T: UIView>(animation: NightingaleViewAnimation = .none, tagFilter: Int? = nil, completion: ((_ complete: Bool) -> Void)? = nil) -> [T] {
+    @discardableResult func removeSubviewsOfType<T: UIView>(tagFilter: Int? = nil) -> [T] {
 
         let allSubviews: [T] = subviewsOfType(tagFilter: tagFilter)
         for subview in allSubviews {
-            subview.animateOut(withViewAnimation: animation, completion: { complete in
-                subview.removeFromSuperview()
-                completion?(complete)
-            })
+            subview.removeFromSuperview()
         }
 
         return allSubviews
@@ -153,10 +126,10 @@ extension UIView {
         return removedSubviews
     }
 
-    @discardableResult func addGradient(frame: CGRect, color: UIColor, at index: UInt32 = 0, locations: [NSNumber] = [0.0, 1.0]) -> GradientLayer {
+    @discardableResult func addGradient(frame: CGRect, color: UIColor, at index: UInt32 = 0, locations: [NSNumber] = [0.0, 1.0]) -> CAGradientLayer {
         let colorTop = color.withAlphaComponent(0).cgColor
         let colorBottom = color.cgColor
-        let gradientLayer = GradientLayer()
+        let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
         gradientLayer.locations = locations
         gradientLayer.frame = frame
