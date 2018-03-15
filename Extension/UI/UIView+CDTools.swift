@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 import QuartzCore
 
-
 extension UIView {
     var className: String {
         return String(describing: type(of: self))
