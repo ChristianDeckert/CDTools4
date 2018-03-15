@@ -17,17 +17,16 @@ Pod::Spec.new do |s|
 
   s.name         = "CDTools4"
   s.version      = "0.0.1"
-  s.summary      = "A short description of CDTools4."
+  s.summary      = "Some little helpers, extension and syntax sugar written in Swift4+."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "Some little helpers, extension and syntax sugar."
 
-  s.homepage     = "http://EXAMPLE/CDTools4"
+  s.homepage     = "https://github.com/ChristianDeckert/CDTools4"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -101,8 +100,6 @@ Pod::Spec.new do |s|
   s.subspec 'Default' do |ss|
     ss.source_files = "Extension/**/*.{swift}"
   end
-
-end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
