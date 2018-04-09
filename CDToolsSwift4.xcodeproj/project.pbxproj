@@ -14,6 +14,8 @@
 		AA1E5362205ACBAC002A5D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1E5361205ACBAC002A5D43 /* Assets.xcassets */; };
 		AA1E5365205ACBAC002A5D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1E5363205ACBAC002A5D43 /* LaunchScreen.storyboard */; };
 		AA3572D8207B766B0033B4E4 /* UIViewController+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3572D6207B75B50033B4E4 /* UIViewController+CDTools.swift */; };
+		AA3572DC207B7CCA0033B4E4 /* UICollectionViewCell+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3572DA207B7A640033B4E4 /* UICollectionViewCell+CDTools.swift */; };
+		AA3572DF207B7CFE0033B4E4 /* UICollectionView+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3572DD207B7CEB0033B4E4 /* UICollectionView+CDTools.swift */; };
 		AA6DB8E4205BAF450002F4B7 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E5349205A94F2002A5D43 /* String+Localizable.swift */; };
 		AA6DB8E5205BAF450002F4B7 /* UIView+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E534B205A94F2002A5D43 /* UIView+CDTools.swift */; };
 		AA6DB8E6205BAF450002F4B7 /* Bundle+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E534C205A94F2002A5D43 /* Bundle+CDTools.swift */; };
@@ -40,6 +42,8 @@
 		AA1E5364205ACBAC002A5D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA1E5366205ACBAC002A5D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3572D6207B75B50033B4E4 /* UIViewController+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CDTools.swift"; sourceTree = "<group>"; };
+		AA3572DA207B7A640033B4E4 /* UICollectionViewCell+CDTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+CDTools.swift"; sourceTree = "<group>"; };
+		AA3572DD207B7CEB0033B4E4 /* UICollectionView+CDTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+CDTools.swift"; sourceTree = "<group>"; };
 		AA6DB8E0205BAF0D0002F4B7 /* UITableView+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CDTools.swift"; sourceTree = "<group>"; };
 		AA6DB8E2205BAF1F0002F4B7 /* UITableViewCell+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CDTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +115,8 @@
 		AA1E534A205A94F2002A5D43 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AA3572DD207B7CEB0033B4E4 /* UICollectionView+CDTools.swift */,
+				AA3572DA207B7A640033B4E4 /* UICollectionViewCell+CDTools.swift */,
 				AA1E534B205A94F2002A5D43 /* UIView+CDTools.swift */,
 				AA1E534C205A94F2002A5D43 /* Bundle+CDTools.swift */,
 				AA1E534D205A94F2002A5D43 /* UIColor+CDTools.swift */,
@@ -243,9 +249,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6DB8E9205BAF450002F4B7 /* UITableView+CDTools.swift in Sources */,
+				AA3572DF207B7CFE0033B4E4 /* UICollectionView+CDTools.swift in Sources */,
 				AA1E535D205ACBA9002A5D43 /* ViewController.swift in Sources */,
 				AA1E535B205ACBA9002A5D43 /* AppDelegate.swift in Sources */,
 				AA6DB8E7205BAF450002F4B7 /* UIColor+CDTools.swift in Sources */,
+				AA3572DC207B7CCA0033B4E4 /* UICollectionViewCell+CDTools.swift in Sources */,
 				AA6DB8E8205BAF450002F4B7 /* UIKeyboard+CDTools.swift in Sources */,
 				AA6DB8E6205BAF450002F4B7 /* Bundle+CDTools.swift in Sources */,
 				AA6DB8E4205BAF450002F4B7 /* String+Localizable.swift in Sources */,
