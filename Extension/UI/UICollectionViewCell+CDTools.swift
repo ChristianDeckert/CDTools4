@@ -1,9 +1,9 @@
 import UIKit
 import Foundation
 
-extension UICollectionViewCell {
+public extension UICollectionViewCell {
 
-    static func dequeue<T: UICollectionViewCell>(in collectionView: UICollectionView, at indexPath: IndexPath) -> T {
+    public static func dequeue<T: UICollectionViewCell>(in collectionView: UICollectionView, at indexPath: IndexPath) -> T {
         if nil == collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? T {
             collectionView.register(cell: T.self)
         }
