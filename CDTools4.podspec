@@ -98,7 +98,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Default'
 
   s.subspec 'Default' do |ss|
-    ss.source_files = "Extension/**/*.{swift}", "/User\ Interface/**/*.{swift}"
+    ss.source_files = "Extension/**/*.{swift}", "User\ Interface/**/*.{swift}"
   end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
