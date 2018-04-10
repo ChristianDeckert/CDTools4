@@ -25,6 +25,7 @@
 		AA6DB8E8205BAF450002F4B7 /* UIKeyboard+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E534E205A94F2002A5D43 /* UIKeyboard+CDTools.swift */; };
 		AA6DB8E9205BAF450002F4B7 /* UITableView+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6DB8E0205BAF0D0002F4B7 /* UITableView+CDTools.swift */; };
 		AA6DB8EA205BAF450002F4B7 /* UITableViewCell+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6DB8E2205BAF1F0002F4B7 /* UITableViewCell+CDTools.swift */; };
+		AAAA4EA0207D432D009C0360 /* NSLayoutConstraint+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA4E9E207D4302009C0360 /* NSLayoutConstraint+CDTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		AA3572F0207CA9AA0033B4E4 /* CDTools4.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDTools4.podspec; sourceTree = "<group>"; };
 		AA6DB8E0205BAF0D0002F4B7 /* UITableView+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CDTools.swift"; sourceTree = "<group>"; };
 		AA6DB8E2205BAF1F0002F4B7 /* UITableViewCell+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CDTools.swift"; sourceTree = "<group>"; };
+		AAAA4E9E207D4302009C0360 /* NSLayoutConstraint+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+CDTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				AA6DB8E0205BAF0D0002F4B7 /* UITableView+CDTools.swift */,
 				AA6DB8E2205BAF1F0002F4B7 /* UITableViewCell+CDTools.swift */,
 				AA3572D6207B75B50033B4E4 /* UIViewController+CDTools.swift */,
+				AAAA4E9E207D4302009C0360 /* NSLayoutConstraint+CDTools.swift */,
 			);
 			name = UI;
 			path = Extension/UI;
@@ -278,6 +281,7 @@
 				AA6DB8E5205BAF450002F4B7 /* UIView+CDTools.swift in Sources */,
 				AA6DB8EA205BAF450002F4B7 /* UITableViewCell+CDTools.swift in Sources */,
 				AA3572D8207B766B0033B4E4 /* UIViewController+CDTools.swift in Sources */,
+				AAAA4EA0207D432D009C0360 /* NSLayoutConstraint+CDTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
