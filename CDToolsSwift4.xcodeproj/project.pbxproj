@@ -48,6 +48,7 @@
 		AA3572DD207B7CEB0033B4E4 /* UICollectionView+CDTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+CDTools.swift"; sourceTree = "<group>"; };
 		AA3572E9207CA1AF0033B4E4 /* Array+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CDTools.swift"; sourceTree = "<group>"; };
 		AA3572ED207CA7420033B4E4 /* ResponsiveLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveLayoutConstraint.swift; sourceTree = "<group>"; };
+		AA3572F0207CA9AA0033B4E4 /* CDTools4.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDTools4.podspec; sourceTree = "<group>"; };
 		AA6DB8E0205BAF0D0002F4B7 /* UITableView+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CDTools.swift"; sourceTree = "<group>"; };
 		AA6DB8E2205BAF1F0002F4B7 /* UITableViewCell+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CDTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +74,7 @@
 		AA1E5332205A9473002A5D43 = {
 			isa = PBXGroup;
 			children = (
+				AA3572F0207CA9AA0033B4E4 /* CDTools4.podspec */,
 				AA1E5347205A94DB002A5D43 /* Extension */,
 				AA3572EF207CA8500033B4E4 /* User Interface */,
 				AA1E5340205A94CA002A5D43 /* CDTools4Tests */,
