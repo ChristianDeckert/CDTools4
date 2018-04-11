@@ -54,7 +54,7 @@ public extension UIViewController {
         return presentedRecursive(of: topViewController)
     }
     
-    func add(childViewController: UIViewController, animation: UIView.Animations, embed: Bool = true, insets: UIEdgeInsets = .zero, duration: TimeInterval = 0.3, complete: (() -> Void)? = nil) {
+    public func add(childViewController: UIViewController, animation: UIView.Animations, embed: Bool = true, insets: UIEdgeInsets = .zero, duration: TimeInterval = 0.3, complete: (() -> Void)? = nil) {
         childViewController.willMove(toParentViewController: self)
         childViewController.beginAppearanceTransition(true, animated: animation.isAnimated)
         
@@ -81,7 +81,7 @@ public extension UIViewController {
         }
     }
     
-    func remove(childViewController: UIViewController, animation: UIView.Animations = .none, complete: (() -> Void)? = nil) {
+    public func remove(childViewController: UIViewController, animation: UIView.Animations = .none, complete: (() -> Void)? = nil) {
         childViewController.willMove(toParentViewController: nil)
         childViewController.beginAppearanceTransition(false, animated: animation.isAnimated)
         

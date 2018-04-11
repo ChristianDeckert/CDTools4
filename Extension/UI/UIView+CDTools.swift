@@ -2,6 +2,11 @@ import Foundation
 import UIKit
 import QuartzCore
 
+public extension TimeInterval {
+    public static var preferredAnimationDuration: TimeInterval {
+        return UIView.Animations.preferredAnimationDuration
+    }
+}
 
 public extension UIView {
     
