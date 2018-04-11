@@ -53,4 +53,50 @@ public extension UIViewController {
         
         return presentedRecursive(of: topViewController)
     }
+    
+    func add(childViewController: UIViewController, animation: UIView.Animations, embed: Bool = true, insets: UIEdgeInsets = .zero, duration: TimeInterval = 0.3, complete: (() -> Void)? = nil) {
+        childViewController.willMove(toParentViewController: self)
+        childViewController.beginAppearanceTransition(true, animated: animation.isAnimated)
+        
+        childViewController.view.alpha = 0
+        if embed {
+            NSLayoutConstraint.embed(view: childViewController.view, in: view, insets: insets)
+        } else {
+            view.addSubview(childViewController.view)
+        }
+        
+        if animation.isAnimated {
+            childViewController.view.animate(in: animation, fromCurrentState: false, completion: { _ in
+                self.addChildViewController(childViewController)
+                childViewController.endAppearanceTransition()
+                childViewController.didMove(toParentViewController: self)
+                complete?()
+            })
+        } else {
+            childViewController.view.alpha = 1
+            self.addChildViewController(childViewController)
+            childViewController.endAppearanceTransition()
+            childViewController.didMove(toParentViewController: self)
+            DispatchQueue.main.async { complete?() }
+        }
+    }
+    
+    func remove(childViewController: UIViewController, animation: UIView.Animations = .none, complete: (() -> Void)? = nil) {
+        childViewController.willMove(toParentViewController: nil)
+        childViewController.beginAppearanceTransition(false, animated: animation.isAnimated)
+        
+        let localCompletion: (Bool) -> Void = { _ in
+            childViewController.view.removeFromSuperview()
+            childViewController.endAppearanceTransition()
+            childViewController.didMove(toParentViewController: nil)
+            complete?()
+        }
+        
+        if animation.isAnimated {
+            childViewController.view.animate(out: animation, completion: localCompletion)
+        } else {
+            localCompletion(false)
+        }
+        
+    }
 }
