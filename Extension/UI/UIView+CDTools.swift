@@ -136,7 +136,6 @@ public extension UIView {
                 self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             }, completion: completion)
         case .fade(let duration):
-            alpha = 1
             UIView.animate(withDuration: duration, animations: {
                 self.alpha = 0
             }, completion: completion)

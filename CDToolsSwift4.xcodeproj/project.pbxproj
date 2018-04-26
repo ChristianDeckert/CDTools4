@@ -25,6 +25,14 @@
 		AA6DB8E8205BAF450002F4B7 /* UIKeyboard+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E534E205A94F2002A5D43 /* UIKeyboard+CDTools.swift */; };
 		AA6DB8E9205BAF450002F4B7 /* UITableView+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6DB8E0205BAF0D0002F4B7 /* UITableView+CDTools.swift */; };
 		AA6DB8EA205BAF450002F4B7 /* UITableViewCell+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6DB8E2205BAF1F0002F4B7 /* UITableViewCell+CDTools.swift */; };
+		AA8CE90D2091B87A00CC0847 /* Collection+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE8FE2091B7C900CC0847 /* Collection+CDTools.swift */; };
+		AA8CE90E2091B87A00CC0847 /* IndexPath+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE8FD2091B7C800CC0847 /* IndexPath+CDTools.swift */; };
+		AA8CE90F2091B87A00CC0847 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE9042091B84400CC0847 /* AnimatedButton.swift */; };
+		AA8CE9102091B87A00CC0847 /* CircularProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE9032091B84400CC0847 /* CircularProgressButton.swift */; };
+		AA8CE9112091B87A00CC0847 /* GrowingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE9012091B84400CC0847 /* GrowingTextField.swift */; };
+		AA8CE9122091B87A00CC0847 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE9062091B84400CC0847 /* Haptics.swift */; };
+		AA8CE9132091B87A00CC0847 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE9052091B84400CC0847 /* ImageButton.swift */; };
+		AA8CE9142091B87A00CC0847 /* UITextField+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CE9022091B84400CC0847 /* UITextField+CDTools.swift */; };
 		AAAA4EA0207D432D009C0360 /* NSLayoutConstraint+CDTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA4E9E207D4302009C0360 /* NSLayoutConstraint+CDTools.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +60,14 @@
 		AA3572F0207CA9AA0033B4E4 /* CDTools4.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDTools4.podspec; sourceTree = "<group>"; };
 		AA6DB8E0205BAF0D0002F4B7 /* UITableView+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CDTools.swift"; sourceTree = "<group>"; };
 		AA6DB8E2205BAF1F0002F4B7 /* UITableViewCell+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CDTools.swift"; sourceTree = "<group>"; };
+		AA8CE8FD2091B7C800CC0847 /* IndexPath+CDTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+CDTools.swift"; sourceTree = "<group>"; };
+		AA8CE8FE2091B7C900CC0847 /* Collection+CDTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+CDTools.swift"; sourceTree = "<group>"; };
+		AA8CE9012091B84400CC0847 /* GrowingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrowingTextField.swift; sourceTree = "<group>"; };
+		AA8CE9022091B84400CC0847 /* UITextField+CDTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+CDTools.swift"; sourceTree = "<group>"; };
+		AA8CE9032091B84400CC0847 /* CircularProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressButton.swift; sourceTree = "<group>"; };
+		AA8CE9042091B84400CC0847 /* AnimatedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
+		AA8CE9052091B84400CC0847 /* ImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		AA8CE9062091B84400CC0847 /* Haptics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		AAAA4E9E207D4302009C0360 /* NSLayoutConstraint+CDTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+CDTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +131,8 @@
 		AA1E5348205A94F2002A5D43 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				AA8CE8FE2091B7C900CC0847 /* Collection+CDTools.swift */,
+				AA8CE8FD2091B7C800CC0847 /* IndexPath+CDTools.swift */,
 				AA1E5349205A94F2002A5D43 /* String+Localizable.swift */,
 				AA3572E9207CA1AF0033B4E4 /* Array+CDTools.swift */,
 			);
@@ -125,6 +143,12 @@
 		AA1E534A205A94F2002A5D43 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AA8CE9042091B84400CC0847 /* AnimatedButton.swift */,
+				AA8CE9032091B84400CC0847 /* CircularProgressButton.swift */,
+				AA8CE9012091B84400CC0847 /* GrowingTextField.swift */,
+				AA8CE9062091B84400CC0847 /* Haptics.swift */,
+				AA8CE9052091B84400CC0847 /* ImageButton.swift */,
+				AA8CE9022091B84400CC0847 /* UITextField+CDTools.swift */,
 				AA3572DD207B7CEB0033B4E4 /* UICollectionView+CDTools.swift */,
 				AA3572DA207B7A640033B4E4 /* UICollectionViewCell+CDTools.swift */,
 				AA1E534B205A94F2002A5D43 /* UIView+CDTools.swift */,
@@ -267,17 +291,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA8CE9122091B87A00CC0847 /* Haptics.swift in Sources */,
 				AA6DB8E9205BAF450002F4B7 /* UITableView+CDTools.swift in Sources */,
+				AA8CE9142091B87A00CC0847 /* UITextField+CDTools.swift in Sources */,
 				AA3572DF207B7CFE0033B4E4 /* UICollectionView+CDTools.swift in Sources */,
+				AA8CE90E2091B87A00CC0847 /* IndexPath+CDTools.swift in Sources */,
+				AA8CE9112091B87A00CC0847 /* GrowingTextField.swift in Sources */,
+				AA8CE90D2091B87A00CC0847 /* Collection+CDTools.swift in Sources */,
+				AA8CE90F2091B87A00CC0847 /* AnimatedButton.swift in Sources */,
 				AA3572EE207CA7420033B4E4 /* ResponsiveLayoutConstraint.swift in Sources */,
 				AA1E535D205ACBA9002A5D43 /* ViewController.swift in Sources */,
 				AA1E535B205ACBA9002A5D43 /* AppDelegate.swift in Sources */,
 				AA6DB8E7205BAF450002F4B7 /* UIColor+CDTools.swift in Sources */,
 				AA3572DC207B7CCA0033B4E4 /* UICollectionViewCell+CDTools.swift in Sources */,
 				AA6DB8E8205BAF450002F4B7 /* UIKeyboard+CDTools.swift in Sources */,
+				AA8CE9102091B87A00CC0847 /* CircularProgressButton.swift in Sources */,
 				AA6DB8E6205BAF450002F4B7 /* Bundle+CDTools.swift in Sources */,
 				AA6DB8E4205BAF450002F4B7 /* String+Localizable.swift in Sources */,
 				AA3572EA207CA1AF0033B4E4 /* Array+CDTools.swift in Sources */,
+				AA8CE9132091B87A00CC0847 /* ImageButton.swift in Sources */,
 				AA6DB8E5205BAF450002F4B7 /* UIView+CDTools.swift in Sources */,
 				AA6DB8EA205BAF450002F4B7 /* UITableViewCell+CDTools.swift in Sources */,
 				AA3572D8207B766B0033B4E4 /* UIViewController+CDTools.swift in Sources */,
