@@ -2,15 +2,15 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class ImageButton: AnimatedButton {
+open class  ImageButton: AnimatedButton {
     
-    public override var isEnabled: Bool {
+    open override var isEnabled: Bool {
         didSet {
             customImageView.alpha = isEnabled ? 1 : 0.5
         }
     }
     
-    @IBInspectable public var image: UIImage? {
+    @IBInspectable open var image: UIImage? {
         get {
             return customImageView.image
         }
@@ -19,7 +19,7 @@ public class ImageButton: AnimatedButton {
         }
     }
     
-    public lazy var customImageView: UIImageView = {
+    open lazy var customImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.embed(in: self, insets: UIEdgeInsetsMake(4, 4, 4, 4))
@@ -27,7 +27,7 @@ public class ImageButton: AnimatedButton {
         return imageView
     }()
     
-    public override func didMoveToSuperview() {
+    open override func didMoveToSuperview() {
         super.didMoveToSuperview()
         guard nil != superview else { return }
         setTitle(nil, for: .normal)

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class CircularProgressButton: AnimatedButton {
+open class CircularProgressButton: AnimatedButton {
     
     public enum TimingFunction {
         
@@ -31,9 +31,9 @@ public class CircularProgressButton: AnimatedButton {
         }
     }
     
-    @IBInspectable public var lineWidth: CGFloat = 4.0
+    @IBInspectable open var lineWidth: CGFloat = 4.0
     
-    public override var shouldAnimate: Bool {
+    open override var shouldAnimate: Bool {
         get {
             return false
         }
@@ -42,16 +42,16 @@ public class CircularProgressButton: AnimatedButton {
         }
     }
     
-    public var timingFunction: TimingFunction = .linear
+    open var timingFunction: TimingFunction = .linear
     
-    @IBInspectable public var strokeColor: UIColor = UIApplication.shared.keyWindow?.rootViewController?.view.tintColor ?? UIColor.blue {
+    @IBInspectable open var strokeColor: UIColor = UIApplication.shared.keyWindow?.rootViewController?.view.tintColor ?? UIColor.blue {
         didSet {
             circleLayer.strokeColor = strokeColor.cgColor
         }
     }
     
     
-    public lazy var lightCircleLayer: CAShapeLayer = {
+    open lazy var lightCircleLayer: CAShapeLayer = {
         let circleLayer = CAShapeLayer()
         circleLayer.frame = bounds
         circleLayer.path = updatedPath().cgPath
@@ -64,7 +64,7 @@ public class CircularProgressButton: AnimatedButton {
         return circleLayer
     }()
     
-    public lazy var circleLayer: CAShapeLayer = {
+    open lazy var circleLayer: CAShapeLayer = {
         let circleLayer = CAShapeLayer()
         circleLayer.frame = bounds
         circleLayer.path = updatedPath().cgPath
@@ -77,7 +77,7 @@ public class CircularProgressButton: AnimatedButton {
         return circleLayer
     }()
     
-    public var currentProgress: CGFloat {
+    open var currentProgress: CGFloat {
         return circleLayer.strokeEnd
     }
     
@@ -89,7 +89,7 @@ public class CircularProgressButton: AnimatedButton {
         return circlePath
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         setupCircleLayer()
     }
@@ -98,15 +98,12 @@ public class CircularProgressButton: AnimatedButton {
         super.init(coder: aDecoder)
     }
     
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-//        setupCircleLayer()
     }
     
-    public override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         super.draw(rect)
-//        guard circleLayer.path == nil else { return }
-//        setupCircleLayer()
     }
     
     private func setupCircleLayer() {
@@ -115,22 +112,15 @@ public class CircularProgressButton: AnimatedButton {
         
         lightCircleLayer.path = updatedPath().cgPath
         layer.insertSublayer(lightCircleLayer, below: circleLayer)
-        //        self.sendSubview(toBack: customImageView)
     }
     
-    public func animate(to value: CGFloat = 1.0, from: CGFloat? = nil, duration: TimeInterval? = nil) {
-        // We want to animate the strokeEnd property of the circleLayer
+    open func animate(to value: CGFloat = 1.0, from: CGFloat? = nil, duration: TimeInterval? = nil) {
+        
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        
-        // Set the animation duration appropriately
         animation.duration = duration ?? super.animationDuration
-        
-        // Animate from 0 (no circle) to 1 (full circle)
         animation.fromValue = from ?? currentProgress
         animation.toValue = value
-        
-        // Do a linear animation (i.e The speed of the animation stays the same)
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.timingFunction = CAMediaTimingFunction(name: timingFunction.asCATimingFunction())
         circleLayer.strokeEnd = value
         circleLayer.add(animation, forKey: "animateCircle")
     }

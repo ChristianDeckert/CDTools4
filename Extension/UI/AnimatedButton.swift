@@ -2,13 +2,13 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class AnimatedButton: UIButton {
+open class AnimatedButton: UIButton {
     
     @IBInspectable public var scaleFactor: CGFloat = 0.9
     @IBInspectable public var animationDuration: TimeInterval = 0.3
     @IBInspectable public var shouldAnimate: Bool = true
     
-    public override func didMoveToSuperview() {
+    open override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
         if nil == superview  {
@@ -25,14 +25,14 @@ public class AnimatedButton: UIButton {
     }
     
     
-    @IBAction public func touchDown() {
+    @IBAction open func touchDown() {
         guard shouldAnimate else { return }
         UIView.animate(withDuration: animationDuration, animations: {
             self.transform = CGAffineTransform.init(scaleX: self.scaleFactor, y: self.scaleFactor)
         }, completion: nil)
     }
     
-    @IBAction public func touchUpInside() {
+    @IBAction open func touchUpInside() {
         UIView.animate(withDuration: animationDuration, animations: {
             self.transform = .identity
         }, completion: nil)
