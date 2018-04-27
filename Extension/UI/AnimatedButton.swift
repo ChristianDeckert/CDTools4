@@ -8,6 +8,12 @@ open class AnimatedButton: UIButton {
     @IBInspectable public var animationDuration: TimeInterval = 0.3
     @IBInspectable public var shouldAnimate: Bool = true
     
+    open override var isEnabled: Bool {
+        didSet {
+            alpha = isEnabled ? 1 : 0.25
+        }
+    }
+    
     open override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
