@@ -10,3 +10,18 @@ public extension UICollectionView {
     }
 }
 
+public extension UICollectionView {
+    
+    public func reloadSections(at index: Int) {
+        reloadSections(IndexSet(integer: index))
+    }
+    
+    public func reloadSections(indices: [Int]) {
+        let indexSet = NSMutableIndexSet()
+        for index in indices {
+            indexSet.add(index)
+        }
+        reloadSections(indexSet as IndexSet)
+    }
+    
+}
