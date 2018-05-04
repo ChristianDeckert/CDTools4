@@ -1,9 +1,9 @@
 import UIKit
 import Foundation
 
-extension UITableViewCell {
+public extension UITableViewCell {
     
-    static func dequeue<T: UITableViewCell>(in tableView: UITableView) -> T {
+    public static func dequeue<T: UITableViewCell>(in tableView: UITableView) -> T {
         if nil == tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? T {
             tableView.register(cell: T.self)
         }
