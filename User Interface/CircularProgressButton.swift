@@ -53,27 +53,27 @@ open class CircularProgressButton: AnimatedButton {
     
     open lazy var lightCircleLayer: CAShapeLayer = {
         let circleLayer = CAShapeLayer()
-        circleLayer.frame = bounds
-        circleLayer.path = updatedPath().cgPath
+        circleLayer.frame = self.bounds
+        circleLayer.path = self.updatedPath().cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
-        circleLayer.strokeColor = strokeColor.withAlphaComponent(0.1).cgColor
-        circleLayer.lineWidth = lineWidth;
+        circleLayer.strokeColor = self.strokeColor.withAlphaComponent(0.1).cgColor
+        circleLayer.lineWidth = self.lineWidth;
         circleLayer.strokeEnd = 1.0
         
-        layer.addSublayer(circleLayer)
+        self.layer.addSublayer(circleLayer)
         return circleLayer
     }()
     
     open lazy var circleLayer: CAShapeLayer = {
         let circleLayer = CAShapeLayer()
-        circleLayer.frame = bounds
-        circleLayer.path = updatedPath().cgPath
+        circleLayer.frame = self.bounds
+        circleLayer.path = self.updatedPath().cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
-        circleLayer.strokeColor = strokeColor.cgColor
-        circleLayer.lineWidth = lineWidth;
+        circleLayer.strokeColor = self.strokeColor.cgColor
+        circleLayer.lineWidth = self.lineWidth;
         circleLayer.strokeEnd = 0.0
         
-        layer.addSublayer(circleLayer)
+        self.layer.addSublayer(circleLayer)
         return circleLayer
     }()
     
