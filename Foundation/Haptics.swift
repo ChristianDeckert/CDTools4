@@ -16,7 +16,7 @@ public struct Haptics {
         
     }
     
-    public static func doubleTap(type: UINotificationFeedbackType = .warning, fallbackVibration: Bool = false) {
+    public static func doubleTap(type: UINotificationFeedbackGenerator.FeedbackType = .warning, fallbackVibration: Bool = false) {
         if #available(iOS 10.0, *) {
             let generator = UINotificationFeedbackGenerator()
             generator.prepare()
@@ -29,7 +29,7 @@ public struct Haptics {
     }
     
     // a single tap via taptic engine
-    public static func singleTap(style: UIImpactFeedbackStyle = .heavy, fallbackVibration: Bool = false) {
+    public static func singleTap(style: UIImpactFeedbackGenerator.FeedbackStyle = .heavy, fallbackVibration: Bool = false) {
         if #available(iOS 10.0, *) {
             let generator = UIImpactFeedbackGenerator(style: style)
             generator.prepare()

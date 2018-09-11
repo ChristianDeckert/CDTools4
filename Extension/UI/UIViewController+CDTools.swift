@@ -55,7 +55,7 @@ public extension UIViewController {
     }
     
     public func add(childViewController: UIViewController, animation: UIView.Animations, embed: Bool = true, insets: UIEdgeInsets = .zero, duration: TimeInterval = 0.3, complete: (() -> Void)? = nil) {
-        childViewController.willMove(toParentViewController: self)
+        childViewController.willMove(toParent: self)
         childViewController.beginAppearanceTransition(true, animated: animation.isAnimated)
         
         childViewController.view.alpha = 0
@@ -67,28 +67,28 @@ public extension UIViewController {
         
         if animation.isAnimated {
             childViewController.view.animate(in: animation, fromCurrentState: false, completion: { _ in
-                self.addChildViewController(childViewController)
+                self.addChild(childViewController)
                 childViewController.endAppearanceTransition()
-                childViewController.didMove(toParentViewController: self)
+                childViewController.didMove(toParent: self)
                 complete?()
             })
         } else {
             childViewController.view.alpha = 1
-            self.addChildViewController(childViewController)
+            self.addChild(childViewController)
             childViewController.endAppearanceTransition()
-            childViewController.didMove(toParentViewController: self)
+            childViewController.didMove(toParent: self)
             DispatchQueue.main.async { complete?() }
         }
     }
     
     public func remove(childViewController: UIViewController, animation: UIView.Animations = .none, complete: (() -> Void)? = nil) {
-        childViewController.willMove(toParentViewController: nil)
+        childViewController.willMove(toParent: nil)
         childViewController.beginAppearanceTransition(false, animated: animation.isAnimated)
         
         let localCompletion: (Bool) -> Void = { _ in
             childViewController.view.removeFromSuperview()
             childViewController.endAppearanceTransition()
-            childViewController.didMove(toParentViewController: nil)
+            childViewController.didMove(toParent: nil)
             complete?()
         }
         

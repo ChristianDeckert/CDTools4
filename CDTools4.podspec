@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CDTools4"
-  s.version      = "0.0.2"
+  s.version      = "4.2.0"
   s.summary      = "Some little helpers, extension and syntax sugar written in Swift4+."
 
   # This description is used to generate tags and improve search results.

@@ -22,11 +22,11 @@ open class CircularProgressButton: AnimatedButton {
         
         public func asCATimingFunction() -> String {
             switch self {
-            case .linear: return kCAMediaTimingFunctionLinear
-            case .easeIn: return kCAMediaTimingFunctionEaseIn
-            case .easeOut: return kCAMediaTimingFunctionEaseOut
-            case .easeInOut: return kCAMediaTimingFunctionEaseInEaseOut
-            default: return kCAMediaTimingFunctionDefault
+            case .linear: return convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.linear)
+            case .easeIn: return convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeIn)
+            case .easeOut: return convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeOut)
+            case .easeInOut: return convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.easeInEaseOut)
+            default: return convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.default)
             }
         }
     }
@@ -120,8 +120,18 @@ open class CircularProgressButton: AnimatedButton {
         animation.duration = duration ?? super.animationDuration
         animation.fromValue = from ?? currentProgress
         animation.toValue = value
-        animation.timingFunction = CAMediaTimingFunction(name: timingFunction.asCATimingFunction())
+        animation.timingFunction = CAMediaTimingFunction(name: convertToCAMediaTimingFunctionName(timingFunction.asCATimingFunction()))
         circleLayer.strokeEnd = value
         circleLayer.add(animation, forKey: "animateCircle")
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCAMediaTimingFunctionName(_ input: CAMediaTimingFunctionName) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCAMediaTimingFunctionName(_ input: String) -> CAMediaTimingFunctionName {
+	return CAMediaTimingFunctionName(rawValue: input)
 }
